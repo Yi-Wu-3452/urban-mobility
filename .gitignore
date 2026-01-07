@@ -1,0 +1,9 @@
+# macOS metadata
+.DS_Store
+
+# Large local datasets
+data/raw/
+data/duckdb/
+
+# Static lookup data
+data/zone_lookup/
