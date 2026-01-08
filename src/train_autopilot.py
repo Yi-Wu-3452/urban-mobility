@@ -31,11 +31,14 @@ WHERE {TARGET} IS NOT NULL AND {TIME_COL} IS NOT NULL
 
 df = duckdb.connect(DUCKDB_PATH, read_only=True).execute(query).fetchdf()
 
+# sort by time 
+df[TIME_COL] = pd.to_datetime(df[TIME_COL])
+df = df.sort_values(TIME_COL).reset_index(drop=True)
+
 # 2) Setup: time-aware split (keeps chronology)
 exp = setup(
     data=df,
     target=TARGET,
-    index=TIME_COL,               # tells PyCaret this is time-indexed
     fold_strategy="timeseries",    # time series CV
     fold=3,
     data_split_shuffle=False,
