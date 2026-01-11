@@ -7,3 +7,14 @@ data/duckdb/
 
 # Static lookup data
 data/zone_lookup/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Models
+models/
+
+# Logs
+logs.log
