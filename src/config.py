@@ -12,3 +12,13 @@ GOLD_METRICS_TABLE = "gold_model_metrics_daily"
 TARGET_COL = "total_amount"
 TIME_COL = "pickup_ts"
 
+DEFAULT_FEATURE_COLS = [
+    "vendor_id",
+    "pu_location_id",
+    "do_location_id",
+    "passenger_count",
+    "congestion_surcharge",
+    "Airport_fee",
+    "pickup_dow",
+    "pickup_hour_of_day",
+]
