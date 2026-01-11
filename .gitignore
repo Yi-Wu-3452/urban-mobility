@@ -4,6 +4,7 @@
 # Large local datasets
 data/raw/
 data/duckdb/
+data/splits/
 
 # Static lookup data
 data/zone_lookup/
